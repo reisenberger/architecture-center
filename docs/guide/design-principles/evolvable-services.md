@@ -1,6 +1,6 @@
-# Design for evolvable services
+# Design for evolvability
 
-Evolvable services are the key to continuous innovation. 
+An evolutionary design is key for continuous innovation. 
 
 All successful applications change over time, whether to fix bugs, add new features, bring in new technologies, or make existing systems more scalable and resilient. If all the parts of an application are tightly coupled, it becomes very hard to introduce changes into the system. A change in one part of the application may break another part, or cause changes to ripple through the entire codebase.
 

@@ -80,11 +80,11 @@ Consider this architectural style for:
 
 - **Management**. To be successful with microservices requires a mature DevOps culture.
 
-- **Logging**. Correlated logging across services can be challenging.
+- **Logging**. Correlated logging across services can be challenging. Typically, logging must correlate multiple service calls for a single user operation.
 
-- **Versioning**. Updates to a service must not break services that depend on it. Multiple services could be updated at any given time, so without careful design, you might hit backward- and forward-compatibility issues.
+- **Versioning**. Updates to a service must not break services that depend on it. Multiple services could be updated at any given time, so without careful design, you might have problems with backward or forward compatibility.
 
-- **Skillset**. Microservices are relatively new. Carefully evaluate whether the team has the skills and experience to be succesful.
+- **Skillset**. Microservices are highly distributed systems. Carefully evaluate whether the team has the skills and experience to be succesful.
 
 ## Principles
 
