@@ -23,8 +23,8 @@ The choice of an architecture style does not dictate a particular technology. Ho
 - [N-tier](./n-tier.md)
 - [Web-queue-worker](./web-queue-worker.md)
 - [Microservices](./microservices.md)
-- [CQRS](./architecture-styles/cqrs.md)
-- [Event-driven architecture](./architecture-styles/event-driven.md)
+- [CQRS](./cqrs.md)
+- [Event-driven architecture](./event-driven.md)
 
 For each architecture style, we include the following:
 

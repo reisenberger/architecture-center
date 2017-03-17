@@ -69,5 +69,5 @@ In the following diagram, Service A writes to a data store, and Service B keeps 
 <!-- links -->
 
 [event-sourcing]: ../../patterns/event-sourcing.md
-[materialized-view]: ../../materialized-view.md
+[materialized-view]: ../../patterns/materialized-view.md
 [microservices]: ./microservices.md
