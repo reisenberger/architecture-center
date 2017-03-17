@@ -14,7 +14,7 @@ Design your application so that it can scale horizontally, adding or removing ne
 
 **Avoid instance stickiness**. Stickiness, or *session affinity*, is when requests from the same client are always routed to the same server. Stickiness limits the application’s ability to scale out. For example, traffic from a high-volume user will not be distributed across instances. Causes of stickiness include storing session state in memory, and using machine-specific keys for encryption. Make sure that any instance can handle any request. 
 
-**Use built-in autoscaling features**. [Azure App Service][app-service-autoscale], [VM Scale Sets][vmss-autoscale], and [Cloud Services][cloud-service-autoscale] all support autoscaling as a built-in feature of the service. If the application has a predictable, regular workload, scale out on a schedule. For example, scale out during business hours. Otherwise, if the workload is not predictable, use performance metrics such as CPU or request queue length to trigger autoscaling.
+**Use built-in autoscaling features**. [Azure App Service][app-service-autoscale], [VM Scale Sets][vmss-autoscale], and [Cloud Services][cloud-service-autoscale] all support autoscaling as a built-in feature of the service. If the application has a predictable, regular workload, scale out on a schedule. For example, scale out during business hours. Otherwise, if the workload is not predictable, use performance metrics such as CPU or request queue length to trigger autoscaling. For autoscaling best practices, see [Autoscaling][autoscaling].
 
 **Identify bottlenecks**. Scale out is not a magic silver bullet.  For example, if your backend database is the bottleneck, it won’t help to add more web servers. Identity and resolve the bottlenecks in the system first, before throwing more instances at the problem. Stateful parts of the system are the mostly likely cause of bottlenecks. 
 
@@ -34,6 +34,7 @@ Design your application so that it can scale horizontally, adding or removing ne
 <!-- links -->
 
 [app-service-autoscale]: https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-scale
-[vmss-autoscale]: https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview
+[autoscaling]: ../../best-practices/auto-scaling.md
 [cloud-service-autoscale]: https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-how-to-scale
 [pipes-filters-pattern]: ../../patterns/pipes-and-filters.md
+[vmss-autoscale]: https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview

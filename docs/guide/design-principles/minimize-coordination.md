@@ -33,8 +33,11 @@ You can use a pattern such as [Scheduler Agent Supervisor][sas-pattern] to coord
 
 **Use MapReduce or other parallel, distributed algorithms.** A MapReduce job splits work into independent tasks that can be performed by multiple nodes working in parallel.
 
+**Use leader election** for operations that do require coordination. In cases where you need to coordinate operations, make sure the coordinator does not become a single point of failure in the application. Using the [Leader Election pattern][leader-election], one instance is the leader at any time, and acts as the coordinator. If the leader fails, a new instance is elected to be the leader. 
+
 
 <!-- links -->
 
 [compensating-transaction]: ../../patterns/compensating-transaction.md
+[leader-election]: ../../patterns/leader-election.md
 [sas-pattern]: ../../patterns/scheduler-agent-supervisor.md

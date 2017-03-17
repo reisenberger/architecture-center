@@ -6,7 +6,7 @@ This design principle may seem obvious, but it’s crucial to keep in mind when 
 
 **Define business objectives,** including the recovery time objective (RTO), recovery point objective (RPO), and maximum tolerable outage (MTO). These numbers should inform decisions about the architecture. For example, to achieve a low RTO, you might implement automated failover to a secondary region. But if your solution can tolerate a higher RTO, that degree of redundancy might be unnecessary.
 
-**Document service level objectives (SLO)**, including availability and performance metrics. You might build a solution that delivers 99.95% availability. Is that enough? The answer is a business decision. 
+**Document service level agreements (SLA) and service level objectives (SLO)**, including availability and performance metrics. You might build a solution that delivers 99.95% availability. Is that enough? The answer is a business decision. 
 
 **Model the application around the business domain.** Create a [ubiquitous language][ubiquitous-language] and a set of [domain models][domain-model] that reflect the business processes and use cases. 
 
