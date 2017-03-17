@@ -7,7 +7,7 @@
 ### [Web-queue-worker](./architecture-styles/web-queue-worker.md)
 ### [Microservices](./architecture-styles/microservices.md)
 ### [CQRS](./architecture-styles/cqrs.md)
-### Event-driven architecture
+### [Event-driven architecture](./architecture-styles/event-driven.md)
 ### Big data architecture
 
 ## [Design principles](./design-principles/index.md)
