@@ -14,11 +14,15 @@ CQRS addresses these problems by separating reads and writes into separate model
 
 - Queries never modify the database. A query returns a DTO that does not encapsulate any domain knowledge.
 
-For greater isolation, you can physically separate the read data from the write data. In that case, the read database can use its own data schema that is optimized for queries. For example, it can store a materialized view of the data, in order to avoid complex joins or complex O/RM mappings. It might even use a different type of data store. For example, the write database might be relational, while the read database is a key-value store.
+For greater isolation, you can physically separate the read data from the write data. In that case, the read database can use its own data schema that is optimized for queries. For example, it can store a [materialized view][materialized-view] of the data, in order to avoid complex joins or complex O/RM mappings. It might even use a different type of data store. For example, the write database might be relational, while the read database is a key-value store.
 
 If separate read and write databases are used, they must be kept in sync. Typically this is accomplished by  having the write model publsh an event whenever it updates the database. Updating the database and publishing the event must occur in a single transaction. 
 
-Some implementations of CQRS use the Event Sourcing pattern. With this pattern, application state is stored as a sequence of events. Each event represents a set of changes to the data. The current state is constructed by replaying the events. In a CQRS context, one benefit of Event Sourcing is that the same events can be used to notify other components &mdash; in particular, to notify the read model. The read model uses the events to create a snapshot of the current state, which is more efficient for queries. However, Event Sourcing adds complexity to the design.
+Some implementations of CQRS use the [Event Sourcing pattern][event-sourcing]. With this pattern, application state is stored as a sequence of events. Each event represents a set of changes to the data. The current state is constructed by replaying the events. In a CQRS context, one benefit of Event Sourcing is that the same events can be used to notify other components &mdash; in particular, to notify the read model. The read model uses the events to create a snapshot of the current state, which is more efficient for queries. However, Event Sourcing adds complexity to the design.
+
+![](./images/cqrs-events.png)
+
+
 
 ## When to use this architecture
 
@@ -53,12 +57,17 @@ Apply CQRS only to those subsystems where there is clear value in separating rea
 
 ## CQRS in Microservices
 
-CQRS can be a useful pattern in a microservices architecture.
+CQRS can be especially useful in a [microservices architecture][microservices]. One of the principles of microservices is that a service cannot directly access another service's data store.
+
+![](./images/cqrs-microservices-wrong.png)
+
+In the following diagram, Service A writes to a data store, and Service B keeps a materialized view of the data. Service A publishes an event whenever it writes to the data store. Service B subscribes to the event.
+
+![](./images/cqrs-microservices-right.png)
 
 
+<!-- links -->
 
-
- 
-![](./images/cqrs-microservices.png)
-
-In this diageram, the read and write models, and their corresponding data stores, are encapsulated in separate services. Events are used to keep the data in sync.
+[event-sourcing]: ../../patterns/event-sourcing.md
+[materialized-view]: ../../materialized-view.md
+[microservices]: ./microservices.md
