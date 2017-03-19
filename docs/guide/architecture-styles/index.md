@@ -2,7 +2,7 @@
 
 We use the term *architecture style* to mean a family of architectures that share certain characteristics. *N-tier* and *microservices* are examples of architecture styles. 
 
-An archicture style imposes a set of *constraints* on an architecture, which guide the design. By conforming to these constraints, certain desirable properties emerge. Therefore it's important to understand not just the constraints (the "shape" of the architecture) but also the motivation behind them. Before choosing a particular style, make sure that you understand the underlying principles and constraints of that style. Otherwise, you can end up with a design that looks superficially as though it conforms to a particular style, but in fact does not achieve the full potential of that style. 
+An architecture style imposes a set of *constraints*, which guide the design. By conforming to these constraints, certain desirable properties emerge. Therefore it's important to understand not just the constraints (the "shape" of the architecture) but also the motivation behind them. Before choosing a particular style, make sure that you understand the underlying principles and constraints of that style. Otherwise, you can end up with a design that looks superficially as though it conforms to a particular style, but does not achieve the full potential of that style. 
 
 The choice of an architecture style does not dictate a particular technology. However, certain technologies are more naturally suited for some architectures. For example, containers are a natural fit for microservices.  
 
