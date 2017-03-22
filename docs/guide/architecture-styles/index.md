@@ -1,15 +1,13 @@
 # Architecture styles
 
-We use the term *architecture style* to mean a family of architectures that share certain characteristics. *N-tier* and *microservices* are examples of architecture styles. 
+We use the term *architecture style* to mean a family of architectures that share certain characteristics. *N-tier* and *microservices* are examples of architecture styles. Architecture styles are not design patterns, but they are analogous. A design pattern is an abstraction that identifies a set of common elements found in concrete implementations, to solve a particular class of problems. Similarly, an architecture style identifies the common elements in a class of architectures, abstracting away details such as technology choice or platform.
 
-Architecture styles are not design patterns, but they are analogous. A design pattern is an abstraction that identifies a set of common elements found in concrete implementations, to solve a particular class of problems. Similarly, an architecture style identifies the common elements in a class of architectures, abstracting away details such as technology choices.
-
-The choice of an architecture style does not dictate a particular technology. However, some technologies are more naturally suited for some architectures. For example, containers are a natural fit for microservices.  
+## Architecture styles as constraints
 
 Roy Fielding defined an architectural style as "a coordinated set of architectural constraints that restricts the roles/features of architectural elements and the allowed
-relationships among those elements" (Fielding, *Architectural Styles and the Design of Network-based Software Architectures*).
+relationships among those elements" (Fielding, *Architectural Styles and the Design of Network-based Software Architectures*). This notion of *constraints* is crucial. Constraints guide the "shape" of an architectur by restricting the universe of choices. When an architecture conforms to the constraints of a particular style, certain desirable properties emerge. 
 
-This notion of *constraints* is crucial. Constraints guide the "shape" of an architectur by restricting the universe of choices. When an architecture conforms to the constraints of a particular style, certain desirable properties emerge. For example, in a microservices architecture, the constraints include: 
+For example, in a microservices architecture, the constraints include: 
 
 - A service represents a single responsibility. 
 - Every service is independent of the others. 
@@ -19,7 +17,11 @@ If these constraints are followed, what emerges is a system where services can b
 
 Before choosing an architecture style, make sure that you understand the underlying principles and constraints of that style. Otherwise, you can end up with a design that conforms to the style at a superficial level, but does not achieve the full potential of that style. 
 
+## Challenges and benefits
+
 Constraints also create challenges, so it's important to understand the trade-offs when adopting any of these styles. Do the benefits of the architecture style outweigh the challenges, *for this application domain*. It's also important to be pragmatic. Sometimes it's better to relax a constraint, rather than insist on architectural purity.
+
+The choice of an architecture style does not dictate a particular technology. However, some technologies are more naturally suited for some architectures. For example, containers are a natural fit for microservices.  
 
 ## A quick tour of the styles	
 

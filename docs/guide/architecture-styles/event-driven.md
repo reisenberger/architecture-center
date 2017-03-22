@@ -41,8 +41,17 @@ In the logical diagram above, each type of consumer is shown as a single box. In
 - Exactly-once processing.
 
 
+## IoT Architecture
+
+
+![](./images/iot.png)
+
+The cloud gateway ingests events. 
+
+
+
  <!-- links -->
 
- [minimize-coordination]: ../design-principles/minimize-coordination.md
+[minimize-coordination]: ../design-principles/minimize-coordination.md
 
 
