@@ -43,10 +43,11 @@ In the logical diagram above, each type of consumer is shown as a single box. In
 
 ## IoT Architecture
 
+The following diagram shows a logical architecture for IoT. The diagram emphasizes the event-streaming components of the architecture.
 
 ![](./images/iot.png)
 
-The cloud gateway ingests events. 
+The **cloud gateway** ingests device events at the cloud boundary, using a brokered messaging system. 
 
 
 
