@@ -2,15 +2,8 @@
 
 A microservices architecture consists of a collection of small, autonomous services. Each service is self-contained and should implement a single business capability. 
 
-There are two main options for building a microservices application on Azure:
-
-- Containers using a container orchestrator such as Docker Swarm, DC/OS, or Kubernetes. 
-- Azure Service Fabric.
-
-
 ![](./images/microservices-logical.png)
  
-
 In some ways, microservices are the natural evolution of service oriented architectures (SOA), but there are differences between microservices and SOA. Here are some defining characteristics of a microservice:
 
 - In a microservices architecture, services are small, independent, and loosely coupled.
@@ -100,14 +93,12 @@ Consider this architectural style for:
 
 - Services should have loose coupling and high functional cohesion. Functions that are likely to change together should be packaged and deployed together. If they reside in separate services, those services end up being tightly coupled, because a change in one service will require updating the other service. Overly chatty communication betweeen two services may be a symptom of tight coupling and low cohesion. 
 
-## Microservices using containers on Azure
+## Microservices using Azure Container Service 
 
-The following diagram shows a microservices architecture using containers running on Azure.
+You can use Azure Container Service to configure and provision a Docker cluster. Azure Container Services supports several popular container orchestrators, including DC/OS, Docker Swarm, and Kubernetes.
 
 ![](./images/microservices-acs.png)
  
-You can use Azure Container Service to configure and provision a Docker cluster. Azure Container Services supports several popular container orchestrators, including DC/OS, Docker Swarm, and Kubernetes.
-
 **Public nodes** are reachable through a public-facing load balancer. The API gateway is hosted on these nodes.
 
 **Backend nodes** run services that clients reach via the API gateway. These nodes don’t receive Internet traffic directly. The backend nodes might include more than one pool of VMs, each with a different hardware profile. For example, you could create separate pools for general compute workloads, high CPU workloads, and high memory workloads. 
@@ -126,15 +117,16 @@ The following diagram shows three nodes running four different services (indicat
 
 ## Microservices using Azure Service Fabric
 
-The following diagram shows a microservices architecture using Azure Service Fabric
+The following diagram shows a microservices architecture using Azure Service Fabric.
 
 ![](./images/service-fabric.png)
 
 The Service Fabric Cluster is deployed to one or more VM scale sets. You might have more than one VM scale set in the cluster, in order to have a mix of VM types. An API Gateway is placed in front of the Service Fabric cluster, with an external load balancer to receive client requests.
 
-The Service Fabric runtime automatically handles node failover, health monitoring, and other cluster management functions. Services communicate with each other using the reverse proxy that is built into Service Fabric. Service Fabric provides a discovery service that can resolve the endpoint for a named service.
+The Service Fabric runtime performs cluster management, including service placement, node failover, and health monitoring. The runtime is deployed on the cluster nodes themselves. There isn't a separate set of cluster management VMs.
 
-![](./images/service-fabric-cluster.png)
+Services communicate with each other using the reverse proxy that is built into Service Fabric. Service Fabric provides a discovery service that can resolve the endpoint for a named service.
+
 
 
 
