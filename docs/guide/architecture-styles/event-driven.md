@@ -1,12 +1,18 @@
 # Event-driven architecture
 
-In an event driven architecture (EDA), application behavior is driven by asynchronous events, using a publish-subscribe (pub-sub) model. In some systems, such as IoT, events must be ingested at very high volumes.
+In an event driven architecture, application behavior is driven by asynchronous events, using a publish-subscribe (pub-sub) model. In some systems, such as IoT, events must be ingested at very high volumes.
 
 ![](./images/event-driven.png)
 
-At its heart, an EDA consists of event producers and event consumers. Producers push events to consumers, through an asynchronous publish/subscribe messaging system. There are no point-to-point integrations in this systenm. Producers are decoupled from consumers, and consumers are decoupled from each other. Message delivery happens in near real time, so consumers can respond immediately to events as they occur.
+At its heart, an event-driven architecture consists of event producers and event consumers. Producers generate events, and consumers listen for them. Producers are decoupled from consumers &mdash; a producer doesn't know which consumers are listening. The events go to all of the consumers, which process them independently from each other. (This differs from a [competing consumers][competing-consumers] pattern.) Events are delivered in near real time, so consumers can respond immediately to events as they occur.
 
-This archicture style has several flavors, depending on the volume and velocity of the event data, and the complexity of the processing by the consumers.
+An event driven architecture can use a publish/subscribe ("pub/sub") model, or an event stream model. 
+
+- **Pub/sub**: The messaging infrastructure keeps track of subscriptions. When an event is published, it sends the event to each subscriber. After an event is received, it cannot be replayed, and new subscribers do not see the event. 
+
+- **Event streaming**: Events are written to a log. Events are strictly ordered (within a partition) and durable. Clients don't "subscribe" to the stream, instead a client can read from any part of the stream. The client is responsible for advancing it's position in the stream. That means a client can join at any time, and can replay events.
+
+On the consumer side, there are some common variations:
 
 - **Simple event processing**. An event immediately triggers an action in the consumer. For example, you could use Azure Functions with a Service Bus trigger, so that a function executes whenever a message is published to a Service Bus topic.
 
@@ -74,6 +80,7 @@ The boxes that are shaded gray show components of an IoT system that are not dir
 
  <!-- links -->
 
+[competing-consumers]: ../../patterns/competing-consumers.md
 [iot-ref-arch]: https://azure.microsoft.com/en-us/updates/microsoft-azure-iot-reference-architecture-available/
 [minimize-coordination]: ../design-principles/minimize-coordination.md
 
