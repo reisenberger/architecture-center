@@ -1,4 +1,4 @@
-# Big Compute 
+# Big Compute architecture style
 
 The term Big Compute describes large scale workloads that require a large number of cores, often numbering in the hundreds or thousands. Scenarios include media transcoding, image rendering, fluid dynamics, financial risk modeling, and engineering stress analysis, among others.
 

@@ -1,4 +1,4 @@
-# CQRS
+# CQRS architecture style
 
 Command and Query Responsibility Segregation (CQRS) is an architectural style that separates read operations from write operations. 
 

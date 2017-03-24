@@ -1,4 +1,4 @@
-# Event-driven architecture
+# Event-driven architecture style
 
 In an event driven architecture, application behavior is driven by asynchronous events, using a publish-subscribe (pub-sub) model. In some systems, such as IoT, events must be ingested at very high volumes.
 

@@ -1,4 +1,4 @@
-# Microservices
+# Microservices architecture style
 
 A microservices architecture consists of a collection of small, autonomous services. Each service is self-contained and should implement a single business capability. 
 

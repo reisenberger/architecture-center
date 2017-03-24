@@ -1,4 +1,4 @@
-# N-tier architecture
+# N-tier architecture style
 
 An N-tier architecture divides an application into **logical layers** and **physical tiers**. 
 

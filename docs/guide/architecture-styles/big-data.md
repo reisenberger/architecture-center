@@ -1,4 +1,4 @@
-# Big Data
+# Big Data architecture style
 
 A **Big Data** architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems. Big data solutions typically involve one or more of the following types of workload:
 
