@@ -57,7 +57,7 @@ CQRS makes the most sense when it’s applied to a subsystem of a larger archite
 
 Consider an event-driven architecture for applications that ingest and process a large volume of data with very low latency, such as IoT solutions. The stye is also useful when different subsystems must perform different types of processing on the same event data.
 
-Finally, **Big Data** and **Big Compute** are specialized architectural styles for workloads that fit certain specific profiles. Big data divides a large dataset into chunks, performing paralleling processing across the entire set. A common scenario for big data is machine learning. Big compute, also called high-performance computing (HPC), makes parallel computations across a large number (thousands) of cores. Domains include simulations, modeling, and 3-D rendering.
+Finally, **[Big Data](./big-data.md)** and **[Big Compute](./big-compute.md)** are specialized architectural styles for workloads that fit certain specific profiles. Big data divides a very large dataset into chunks, performing paralleling processing across the entire set, for analysis and reporting. Big compute, also called high-performance computing (HPC), makes parallel computations across a large number (thousands) of cores. Domains include simulations, modeling, and 3-D rendering.
 
 The following table summarizes how each style manages dependencies, and the types of domain that are best suited for each.
 

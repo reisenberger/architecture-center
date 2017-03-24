@@ -8,7 +8,8 @@
 ### [Microservices](./architecture-styles/microservices.md)
 ### [CQRS](./architecture-styles/cqrs.md)
 ### [Event-driven architecture](./architecture-styles/event-driven.md)
-### Big data architecture
+### [Big Data](./architecture-styles/big-data.md)
+### [Big Compute](./architecture-styles/big-compute.md)
 
 ## [Design principles](./design-principles/index.md)
 ### [Use managed services](./design-principles/managed-services.md)
