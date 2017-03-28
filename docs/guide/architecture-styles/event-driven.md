@@ -16,7 +16,7 @@ On the consumer side, there are some common variations:
 
 - **Simple event processing**. An event immediately triggers an action in the consumer. For example, you could use Azure Functions with a Service Bus trigger, so that a function executes whenever a message is published to a Service Bus topic.
 
-- **Complex event processing**. A consumer processes a series of events, looking for patterns in the event data, using a technology such as Azure Stream Analytics or Apache Storm. For example, you could aggregrate readings from an embedded device over a time window, and generate a notification if the moving average crosses a certain threshold. 
+- **Complex event processing**. A consumer processes a series of events, looking for patterns in the event data, using a technology such as Azure Stream Analytics or Apache Storm. For example, you could aggregate readings from an embedded device over a time window, and generate a notification if the moving average crosses a certain threshold. 
 
 - **Event stream processing**. Use a data streaming platform, such as Azure IoT Hub or Apache Kafka, as a pipeline to ingest events and feed them to stream processors. The stream processors act to process or transform the stream. There may be multiple stream processors for different subsystems of the application. This approach is a good fit for IoT workloads.
 
@@ -54,7 +54,7 @@ Event driven architectures are central to IoT solutions. The following diagram s
 
 The **cloud gateway** ingests device events at the cloud boundary, using a reliable, low latency messaging system.
 
-Devices might send events directly to the cloud gateway, or through a **field gateway**. A field gateway is a specialized device or software, usually co-located with the devices, that receives events and forwards them to the cloud gateway. The field gateay might also pre-process the raw device events, performing functions such as filtering, aggregation, or protocol transformation.
+Devices might send events directly to the cloud gateway, or through a **field gateway**. A field gateway is a specialized device or software, usually co-located with the devices, that receives events and forwards them to the cloud gateway. The field gateway might also pre-process the raw device events, performing functions such as filtering, aggregation, or protocol transformation.
 
 After ingestion, events go through one ore more **stream processors** that can route the data (for example, to storage) or perform analytics and other processing.
 

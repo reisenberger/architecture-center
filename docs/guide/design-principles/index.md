@@ -7,7 +7,7 @@
 - [Design for self-healing](self-healing.md)
 - [Make all things redundant](redundancy.md)
 - [Use the best data store for the job](use-the-best-data-store.md)
-- [Design for evolvable services](evolvable-services.md)
+- [Design for change](design-for-change.md)
 - [Design for operations](design-for-operations.md)
 - [Build for the needs of business](build-for-business.md)
 

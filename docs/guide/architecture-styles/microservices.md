@@ -20,11 +20,11 @@ In some ways, microservices are the natural evolution of service oriented archit
 
 Besides for the services themselves, some other components appear in a typical microservices architecture:
 
-**Management**. The management component is reponsible for placing services on nodes, identifying failures, rebalancing services across nodes, and so forth.  
+**Management**. The management component is responsible for placing services on nodes, identifying failures, rebalancing services across nodes, and so forth.  
 
 **Service Discovery**.  Maintains a list of services and which nodes they are located on. Enables service lookup to find the endpoint for a service. 
 
-**API Gateway**. The API gateway is the entry point for clients. Clients don’t call services directly. Instead, they call the API gateway, which forwards the call to the appropriate services on the back end. The API gateway might aggregate the responses from several services and return the aggregrated response. 
+**API Gateway**. The API gateway is the entry point for clients. Clients don’t call services directly. Instead, they call the API gateway, which forwards the call to the appropriate services on the back end. The API gateway might aggregate the responses from several services and return the aggregated response. 
 
 The advantages of using an API gateway include:
 
@@ -51,7 +51,7 @@ Consider this architectural style for:
 
 - **Small, focused teams.** Teams can focus on one service. The smaller scope of each service makes the code base easier to understand and reason about. It's easier to ramp up.
 
-- **Independent deployments**. You can update a service without re-deploying the entire application, and roll back an update if somethign goes wrong. Bug fixes and feature releases are more manageable and less risky.
+- **Independent deployments**. You can update a service without re-deploying the entire application, and roll back an update if something goes wrong. Bug fixes and feature releases are more manageable and less risky.
 
 - **Independent development**. A single development team can build, test, and deploy a service. The result is continuous innovation and a faster release cadence. 
 
@@ -77,7 +77,7 @@ Consider this architectural style for:
 
 - **Versioning**. Updates to a service must not break services that depend on it. Multiple services could be updated at any given time, so without careful design, you might have problems with backward or forward compatibility.
 
-- **Skillset**. Microservices are highly distributed systems. Carefully evaluate whether the team has the skills and experience to be succesful.
+- **Skillset**. Microservices are highly distributed systems. Carefully evaluate whether the team has the skills and experience to be successful.
 
 ## Principles
 
@@ -91,7 +91,7 @@ Consider this architectural style for:
 
 - Avoid the Enterprise Service Bus pattern that builds domain logic into the messaging infrastructure.
 
-- Services should have loose coupling and high functional cohesion. Functions that are likely to change together should be packaged and deployed together. If they reside in separate services, those services end up being tightly coupled, because a change in one service will require updating the other service. Overly chatty communication betweeen two services may be a symptom of tight coupling and low cohesion. 
+- Services should have loose coupling and high functional cohesion. Functions that are likely to change together should be packaged and deployed together. If they reside in separate services, those services end up being tightly coupled, because a change in one service will require updating the other service. Overly chatty communication between two services may be a symptom of tight coupling and low cohesion. 
 
 ## Microservices using Azure Container Service 
 

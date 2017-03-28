@@ -15,7 +15,7 @@ An N-tier application can have a **closed layer architecture** or an **open laye
 - In a closed layer architecture, a layer can only call the next layer immediately down. 
 - In an open layer architecture, a layer can call any of the layers below it. 
 
-A closed layer architecture limits the dependencies between layers. However, it might create unnecessary network traffic, if one layer is simplying passing requests along to the next layer. 
+A closed layer architecture limits the dependencies between layers. However, it might create unnecessary network traffic, if one layer simply passes requests along to the next layer. 
 
 
 ## When to use this architecture
@@ -71,7 +71,7 @@ Do not allow direct RDP or SSH access to VMs that are running application code. 
 
 - For high security, place a network in front of the application. The DMZ includes network virtual appliances (NVAs) that implement security functionality such as firewalls and packet inspection. For more information, see [Network DMZ][dmz].
 
-- For high availability, place two or more NVAs in an availability set, with an external load balancer to distribute Interet requests across the instances. For more information, see [Deploy highly availabile network virtual appliances][ha-nva].
+- For high availability, place two or more NVAs in an availability set, with an external load balancer to distribute Internet requests across the instances. For more information, see [Deploy highly available network virtual appliances][ha-nva].
 
 - You can extend the Azure virtual network to your on-premises network using a site-to-site virtual private network (VPN) or Azure Expressroute. For more information, see [Hybrid network][hybrid-network].
 

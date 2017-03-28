@@ -51,11 +51,11 @@ The **[CQRS](./cqrs.md)** (Command and Query Responsibility Segregation) style s
 
 CQRS makes the most sense when it’s applied to a subsystem of a larger architecture. Generally, you shouldn’t impose it across the entire application, as that will just create unneeded complexity. Consider it for collaborative domains where many users access the same data.
 
-**[Event-Driven Architecture](./event-driven.md)** uses a publish-subscribe (pub-sub) model, where producers pubish events, and consumers subscribe to them. The producers are independent from the consumers, and consumers are independent from each other. 
+**[Event-Driven Architecture](./event-driven.md)** uses a publish-subscribe (pub-sub) model, where producers publish events, and consumers subscribe to them. The producers are independent from the consumers, and consumers are independent from each other. 
 
 ![](./images/event-driven-sketch.svg)
 
-Consider an event-driven architecture for applications that ingest and process a large volume of data with very low latency, such as IoT solutions. The stye is also useful when different subsystems must perform different types of processing on the same event data.
+Consider an event-driven architecture for applications that ingest and process a large volume of data with very low latency, such as IoT solutions. The style is also useful when different subsystems must perform different types of processing on the same event data.
 
 Finally, **[Big Data](./big-data.md)** and **[Big Compute](./big-compute.md)** are specialized architectural styles for workloads that fit certain specific profiles. Big data divides a very large dataset into chunks, performing paralleling processing across the entire set, for analysis and reporting. Big compute, also called high-performance computing (HPC), makes parallel computations across a large number (thousands) of cores. Domains include simulations, modeling, and 3-D rendering.
 

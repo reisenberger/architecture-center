@@ -19,6 +19,6 @@
 ### [Design for self-healing](./design-principles/self-healing.md)
 ### [Make all things redundant](./design-principles/redundancy.md)
 ### [Use the best data store for the job](./design-principles/use-the-best-data-store.md)
-### [Design for evolvable services](./design-principles/evolvable-services.md)
+### [Design for change](./design-principles/design-for-change.md)
 ### [Design for operations](./design-principles/design-for-operations.md)
 ### [Build for the needs of business](./design-principles/build-for-business.md)

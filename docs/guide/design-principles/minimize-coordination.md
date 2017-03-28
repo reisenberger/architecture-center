@@ -21,13 +21,13 @@ You can use a pattern such as [Scheduler Agent Supervisor][sas-pattern] to coord
 
 **Use multiversion concurrency control (MVCC)** when the database engine supports it. MVCC isolates reads from write transactions without locking. 
 
-**Use event sourcing**. With this approach, changes to state are recorded as a series of events to an append-only data store. Appending an event to the stream is an atomic operation, requiring minimal locking. The current state is obtained by replaying the events.
+**Use event sourcing**. In the [Event Sourcing][event-sourcing] pattern, state changes are recorded as a series of events to an append-only data store. Appending an event to the stream is an atomic operation, requiring minimal locking. The current state is obtained by replaying the events.
 
 **Embrace eventual consistency.** When data is distributed, it takes coordination to enforce strong consistency guarantees. For example, suppose an operation updates two databases. Instead of putting it into a single transaction scope, it's better if the system can accommodate eventual consistency, perhaps by using the [Compensating Transaction][compensating-transaction] pattern to roll back after a failure.
 
 **Partition data.**  Avoid putting all of your data into one relational DB scheme that is shared across many application services. (Microservices architectures enforce this principle by making each service responsible for its own data store.) Within a single database, partitioning the data into shards can improve concurrency, because a service writing to one shard does not affect a service writing to a different shard.
 
-**Perform asynchronous parallel processing**. In a multi-step operation, call several services asynchronously in parallel, and then aggregate the results, rather than wait for each service to respond before calling the next.	
+**Use asynchronous parallel processing**. If an operation requires multiple steps that are performed asynchronously (such as remote service calls), you might be able to call them in parallel, and then aggregate the results. This approach assumes that each step does not depend on the results of the previous step.	
 
 **Design idempotent operations.** When possible, design operations to be idempotent. That way, they can be handled using at-least-once semantics. For example, you can put work items on a queue. If a worker crashes in the middle of an operation, another worker simply picks up the work item.
 
@@ -39,5 +39,6 @@ You can use a pattern such as [Scheduler Agent Supervisor][sas-pattern] to coord
 <!-- links -->
 
 [compensating-transaction]: ../../patterns/compensating-transaction.md
+[event-sourcing]: ../../patterns/event-sourcing.md
 [leader-election]: ../../patterns/leader-election.md
 [sas-pattern]: ../../patterns/scheduler-agent-supervisor.md

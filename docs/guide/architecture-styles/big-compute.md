@@ -5,7 +5,7 @@ The term Big Compute describes large scale workloads that require a large number
 Here are some typical characteristics of Big Compute applications:
 
 - They consist of individual tasks that run many times. 
-- Each task is finite. It takes some input, does some processing, and produces output. The entire application runs for a finite amount of time (minutes to hours). A common pattern is to provion a large number of cores in a burst, and then spin down to zero once the application completes. 
+- Each task is finite. It takes some input, does some processing, and produces output. The entire application runs for a finite amount of time (minutes to hours). A common pattern is to provision a large number of cores in a burst, and then spin down to zero once the application completes. 
 - The application does not need to stay up 24/7. However, the system must handle node failures or application crashes.
 - For some applications, tasks are independent and can run in parallel. In other cases, tasks are tightly coupled, meaning they must interact or exchange intermediate results. In that case, consider using high-speed networking technologies such as InfiniBand and remote direct memory access (RDMA). 
 - Depending on your workload, you might use compute-intensive VM sizes (H-series or A8-A11 sizes).
@@ -44,7 +44,7 @@ The head node provides management and job scheduling services to the cluster.  F
 
 ### Burst an HPC cluster to Azure
 
-In this scenario, an organization is running HPC Pack on-premise, and uses Azure VMs for burst capacity. The cluster head node is on-premises. ExpressRoute or VPN Gateway connects the on-premises network to the Azure VNet.
+In this scenario, an organization is running HPC Pack on-premises, and uses Azure VMs for burst capacity. The cluster head node is on-premises. ExpressRoute or VPN Gateway connects the on-premises network to the Azure VNet.
 
 ![](./images/big-compute-hybrid.png) 
 
