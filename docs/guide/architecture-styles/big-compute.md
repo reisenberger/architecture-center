@@ -17,6 +17,7 @@ Here are some typical characteristics of Big Compute applications:
 ## Benefits
 
 - High performance with "[embarrassingly parallel][embarrassingly-parallel]" processing.
+- You can provision VMs as needed to do work, and then tear them down. 
 
 ## Challenges
 

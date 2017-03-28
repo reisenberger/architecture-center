@@ -4,8 +4,7 @@ We use the term *architecture style* to mean a family of architectures that shar
 
 ## Architecture styles as constraints
 
-Roy Fielding defined an architectural style as "a coordinated set of architectural constraints that restricts the roles/features of architectural elements and the allowed
-relationships among those elements" (Fielding, *Architectural Styles and the Design of Network-based Software Architectures*). This notion of *constraints* is crucial. Constraints guide the "shape" of an architectur by restricting the universe of choices. When an architecture conforms to the constraints of a particular style, certain desirable properties emerge. 
+An architecture style places *constraints* on the design of a system, including what elements can appear, and the allowed relationships between elements (see Fielding, *Architectural Styles and the Design of Network-based Software Architectures*). Constraints guide the "shape" of an architectur by restricting the universe of choices. When an architecture conforms to the constraints of a particular style, certain desirable properties emerge. 
 
 For example, in a microservices architecture, the constraints include: 
 
