@@ -4,7 +4,7 @@ description: Resilient applications can recover from failures without manual int
 pnp.series.title: Cloud design principles
 ---
 
-# Design for self healing
+# Design for self-healing
 
 In a distributed system, failures happen. Hardware can fail. The network can have transient failures. Rarely, an entire service or region may experience a disruption, but even those must be planned for.
 
@@ -14,9 +14,9 @@ Therefore, design an application to be self-healing when failures occur. This re
 - Respond to failures gracefully.
 - Log and monitor failures, to give operational insight.
 
-How you respond to a particular type of failure may depend on your application’s availability requirements. For example, if you require very high availability (five 9s), you might automatically fail over to a secondary region during a regional outage. However, that will incur a higher cost than a single-region deployment. 
+How you respond to a particular type of failure may depend on your application’s availability requirements. For example, if you require very high availability, you might automatically fail over to a secondary region during a regional outage. However, that will incur a higher cost than a single-region deployment. 
 
-Also, don’t just consider "big events" like regional outages, which are generally rare. You should focus as much, if not more, on handling local, short-lived failures, such as network connectivity failures.
+Also, don’t just consider "big events" like regional outages, which are generally rare. You should focus as much, if not more, on handling local, short-lived failures, such as network connectivity failures or failed database connections.
 
 ## Recommendations
 

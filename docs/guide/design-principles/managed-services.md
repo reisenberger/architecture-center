@@ -8,7 +8,7 @@ For example, suppose your application needs a message queue. You could set up yo
 
 | Instead of running... | Consider using... |
 |-----------------------|-------------|
-| Active Directory | Azure Active Directory |
+| Active Directory | Azure Active Directory Domain Services |
 | Elasticsearch | Azure Search |
 | Hadoop | HDInsight |
 | IIS | App Service |

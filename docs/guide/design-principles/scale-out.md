@@ -16,7 +16,7 @@ Design your application so that it can scale horizontally, adding or removing ne
 
 **Use built-in autoscaling features**. [Azure App Service][app-service-autoscale], [VM Scale Sets][vmss-autoscale], and [Cloud Services][cloud-service-autoscale] all support autoscaling as a built-in feature of the service. If the application has a predictable, regular workload, scale out on a schedule. For example, scale out during business hours. Otherwise, if the workload is not predictable, use performance metrics such as CPU or request queue length to trigger autoscaling. For autoscaling best practices, see [Autoscaling][autoscaling].
 
-**Identify bottlenecks**. Scale out is not a magic silver bullet.  For example, if your backend database is the bottleneck, it won’t help to add more web servers. Identity and resolve the bottlenecks in the system first, before throwing more instances at the problem. Stateful parts of the system are the mostly likely cause of bottlenecks. 
+**Identify bottlenecks**. Scaling out isn't a magic fix for every performance issue. For example, if your backend database is the bottleneck, it won’t help to add more web servers. Identity and resolve the bottlenecks in the system first, before throwing more instances at the problem. Stateful parts of the system are the mostly likely cause of bottlenecks. 
 
 **Consider aggressive auto-scaling for critical workloads**. For critical workloads, you want to keep ahead of demand. It's better to add new instances quickly under heavy load to handle the additional traffic, and then gradually scale back.
 

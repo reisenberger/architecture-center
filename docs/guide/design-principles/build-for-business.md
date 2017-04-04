@@ -1,6 +1,6 @@
 # Build for the needs of the business
 
-This design principle may seem obvious, but it’s crucial to keep in mind when designing a solution. A solution that works for a few thousand users won’t scale to millions of users, unless you’ve designed that capability into the architecture. A design that gives you 99.9% availability won’t magically achieve 99.999% availability. And so on. Ultimately, every design decision must be justified by a business requirement. 
+This design principle may seem obvious, but it’s crucial to keep in mind when designing a solution. Do you anticipate millions of users, or a few thousand? Is a one-hour application outage acceptable? Do you expect large bursts in traffic, or a very predictable workload? Ultimately, every design decision must be justified by a business requirement. 
 
 ## Recommendations
 
