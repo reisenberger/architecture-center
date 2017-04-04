@@ -1,4 +1,5 @@
-# Use managed services
+# Design Principles for Azure Applications
+## 1. Use managed services
 
 Whenever possible, prefer managed services over IaaS solutions. 
 
