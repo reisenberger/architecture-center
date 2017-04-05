@@ -1,6 +1,4 @@
-# Design Principles for Azure Applications
-
-## 2. Minimize coordination between application services
+# Minimize coordination between application services
 
 **Minimize coordination between application services to achieve scalability.**
 

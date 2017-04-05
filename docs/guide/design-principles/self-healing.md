@@ -4,8 +4,7 @@ description: Resilient applications can recover from failures without manual int
 pnp.series.title: Cloud design principles
 ---
 
-# Design Principles for Azure Applications
-## 5. Design for self-healing
+# Design for self-healing
 
 **Design your application to be self-healing when failures occur.**
 

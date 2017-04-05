@@ -1,5 +1,4 @@
-# Design Principles for Azure Applications
-## 10. Build for the needs of the business
+# Build for the needs of the business
 
 **Every design decision must be justified by a business requirement.**
 

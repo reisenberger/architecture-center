@@ -1,6 +1,4 @@
-# Design Principles for Azure Applications
-
-## 7. Use the best data store for the job
+# Use the best data store for the job
 
 **Pick the storage technology that is the best fit for your data and how it will be used.**
 

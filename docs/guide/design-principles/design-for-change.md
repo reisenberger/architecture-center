@@ -1,5 +1,4 @@
-# Design Principles for Azure Applications
-## 8. Design for change
+# Design for change
 
 **An evolutionary design is key for continuous innovation.**
 

@@ -4,8 +4,7 @@ description: Avoid single points of failure by building redundancy into your app
 pnp.series.title: Cloud design principles
 ---
 
-# Design Principles for Azure Applications
-## 6. Make all things redundant
+# Make all things redundant
 
 **Build redundancy into your application, to avoid having single points of failure.**
 

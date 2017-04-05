@@ -1,6 +1,4 @@
-# Design Principles for Azure Applications
-
-## 3. Partition around limits
+# Partition around limits
 
 **Use partitioning to work around database, network, and compute limits.**
 

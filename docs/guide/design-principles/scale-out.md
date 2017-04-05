@@ -4,8 +4,7 @@ description: Cloud applications should be designed for horizontal scaling.
 pnp.series.title: Cloud design principles
 ---
 
-# Design Principles for Azure Applications
-## 4. Design to scale out
+# Design to scale out
 
 **Design your application so that it can scale horizontally, adding or removing new instances as demand requires.**
 

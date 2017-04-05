@@ -1,5 +1,4 @@
-# Design Principles for Azure Applications
-## 9. Design for operations
+# Design for operations
 
 **Design an application so that the operations team has the tools they need.**
 
