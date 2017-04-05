@@ -1,7 +1,7 @@
 # Design Principles for Azure Applications
 ## 1. Use managed services
 
-Whenever possible, prefer managed services over IaaS solutions. 
+Whenever possible, prefer Platform as a Service (PaaS) over Infrastructure as a Service (IaaS).
 
 IaaS is like having a box of parts. You can build anything, but you have to assemble it yourself. Managed services are easier to configure and administer. You don't need to provision VMs, set up VNets, manage patches and updates, and all of the other overhead associated with running software on a VM.
 
