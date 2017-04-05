@@ -1,4 +1,7 @@
-# Design for operations
+# Design Principles for Azure Applications
+## 9. Design for operations
+
+**Design an application so that the operations team has the tools they need.**
 
 The cloud has dramatically changed the role of the operations team. They are no longer responsible for managing the hardware and infrastructure that hosts the application.  That said, operations is still a critical part of running a successful cloud application. Some of the important functions of the operations team include:
 
@@ -8,9 +11,9 @@ The cloud has dramatically changed the role of the operations team. They are no 
 - Incident response
 - Security auditing
 
-Design an application so that the operations team has the tools they need. Robust logging and tracing are particularly important. Involve the operations team in design and planning.
+Robust logging and tracing are particularly important in cloud applications. Involve the operations team in design and planning, to ensure the application gives them the data and insight thay need to be successful. 
 
-## Recommendations
+## Examples
 
 **Make all things observable**. Once a solution is deployed and running, logs and traces are your primary insight into the system. *Tracing* records a path through the system, and is useful to pinpoint bottlenecks, performance issues, and failure points. *Logging* captures individual events such as application state changes, errors, and exceptions. Log in production, or else you lose insight at the very times when you need it the most.
 

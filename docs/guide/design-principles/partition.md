@@ -1,5 +1,8 @@
-# Partition around limits
+# Design Principles for Azure Applications
 
+## 3. Partition around limits
+
+**Use partitioning to work around database, network, and compute limits.**
 
 In the cloud, all services have limits in their ability to scale up. Azure service limits are documented in [Azure subscription and service limits, quotas, and constraints][azure-limits]. Limits include number of cores, database size, query throughput, and network throughput. If your system grows sufficiently large, you may hit one or more of these limits. Use partitioning to work around these limits.
 
@@ -25,7 +28,7 @@ For more detailed guidance, see [Data partitioning][data-partitioning-guidance].
 
 If you partition a cluster, you will need a way to route requests to the correct partition, for example by using layer-7 routing or Azure Traffic Manager. For more information, see [Using load-balancing services in Azure][load-balancing].
 
-## Recommendations
+## Examples
 
 **Partition different parts of the application.** Databases are one obvious candidate for partitioning, but also consider storage, cache, queues, and compute instances.
 

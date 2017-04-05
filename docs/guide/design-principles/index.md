@@ -1,6 +1,6 @@
 # Design principles for Azure applications
 
-**[Use managed services.](managed-services.md)** Whenever possible, prefer Platform as a Service (PaaS) over Infrastructure as a Service (IaaS).
+**[Use managed services.](managed-services.md)** When possible, use Platform as a Service (PaaS) over Infrastructure as a Service (IaaS).
 
 **[Minimize coordination.](minimize-coordination.md)** Minimize coordination between application services to achieve scalability.
  
@@ -12,7 +12,7 @@
 
 **[Make all things redundant.](redundancy.md)** Build redundancy into your application, to avoid having single points of failure.
  
-**[Use the best data store for the job.](use-the-best-data-store.md)** In any large solution, it's likely that a single data store technology won’t fill all your needs. 
+**[Use the best data store for the job.](use-the-best-data-store.md)** Pick the storage technology that is the best fit for your data and how it will be used. 
  
 **[Design for change.](design-for-change.md)** All successful applications change over time. An evolutionary design is key for continuous innovation.
 

@@ -24,7 +24,7 @@ The choice of an architecture style does not dictate a particular technology. Ho
 
 ## A quick tour of the styles	
 
-This section gives a quick tour of the architecture styles that we’ve identified, along with some high-level considerations for their use. Later sections go into more detail about each style.
+This section gives a quick tour of the architecture styles that we've identified, along with some high-level considerations for their use. Later sections go into more detail about each style.
 
 **[N-tier](./n-tier.md)** is a traditional architecture for enterprise applications. Dependencies are managed by dividing the application into *layers* that perform logical functions, such as presentation, business logic, and data access. A layer can only call into layers that sit below it. However, this horizontal layering can be a liability. It can be hard to introduce changes in one part of the application without touching the rest of the application. That makes frequent updates a challenge, and can limit the rate at which new features are added.
 
@@ -48,7 +48,7 @@ The **[CQRS](./cqrs.md)** (Command and Query Responsibility Segregation) style s
 
 ![](./images/cqrs-sketch.svg)
 
-CQRS makes the most sense when it’s applied to a subsystem of a larger architecture. Generally, you shouldn’t impose it across the entire application, as that will just create unneeded complexity. Consider it for collaborative domains where many users access the same data.
+CQRS makes the most sense when it's applied to a subsystem of a larger architecture. Generally, you shouldn't impose it across the entire application, as that will just create unneeded complexity. Consider it for collaborative domains where many users access the same data.
 
 **[Event-Driven Architecture](./event-driven.md)** uses a publish-subscribe (pub-sub) model, where producers publish events, and consumers subscribe to them. The producers are independent from the consumers, and consumers are independent from each other. 
 

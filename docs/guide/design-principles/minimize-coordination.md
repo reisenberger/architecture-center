@@ -1,4 +1,8 @@
-# Minimize coordination between application services
+# Design Principles for Azure Applications
+
+## 2. Minimize coordination between application services
+
+**Minimize coordination between application services to achieve scalability.**
 
 Most cloud applications consist of multiple application services &mdash; web front ends, databases, business processes, reporting and analysis, and so on. To achieve scalability and reliability, each of those services should run on multiple instances. 
 
@@ -15,7 +19,7 @@ crashes, the order isn't dropped.
 
 You can use a pattern such as [Scheduler Agent Supervisor][sas-pattern] to coordinate between the workers, but in this case a better approach might be to partition the work. Each worker is assigned a certain range of orders (say, by billing region). If a worker crashes, a new instance picks up where the previous instance left off, but multiple instances aren't contending.
 
-## Recommendations
+## Examples
 
 **Embrace eventual consistency.** When data is distributed, it takes coordination to enforce strong consistency guarantees. For example, suppose an operation updates two databases. Instead of putting it into a single transaction scope, it's better if the system can accommodate eventual consistency, perhaps by using the [Compensating Transaction][compensating-transaction] pattern to logically roll back after a failure.
 

@@ -4,7 +4,7 @@ Command and Query Responsibility Segregation (CQRS) is an architectural style th
 
 ![](./images/cqrs-logical.png)
 
-In traditional architectures, the same data model is used to query and update a database. That’s simple and works well for basic CRUD operations. In more complex applications, however, this approach can become unwieldy. For example, on the read side, the application may perform many different queries, returning DTOs with different shapes. Object mapping can become complicated. On the write side, the model may implement complex validation and business logic. As a result, you can end up with an overly complex model that does too much.
+In traditional architectures, the same data model is used to query and update a database. That's simple and works well for basic CRUD operations. In more complex applications, however, this approach can become unwieldy. For example, on the read side, the application may perform many different queries, returning DTOs with different shapes. Object mapping can become complicated. On the write side, the model may implement complex validation and business logic. As a result, you can end up with an overly complex model that does too much.
 
 Another potential problem is that read and write workloads are often asymmetrical, with very different performance and scale requirements. 
 
@@ -34,7 +34,7 @@ Apply CQRS only to those subsystems where there is clear value in separating rea
 ## Benefits
 
 - **Simpler models**. Most of the transactional business logic goes into the write model. The read model is relatively simple and lightweight.
-- **Security**. It’s easier to ensure that only the right domain entities are performing writes on the data.
+- **Security**. It's easier to ensure that only the right domain entities are performing writes on the data.
 - **Separation of read and write workloads** This allows each workload to be scaled independently, and may result in fewer lock contentions.
 - **Simpler queries**. By storing a materialized view in the read database, the application can avoid complex joins when querying.
 

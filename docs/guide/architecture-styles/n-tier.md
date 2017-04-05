@@ -6,7 +6,7 @@ An N-tier architecture divides an application into **logical layers** and **phys
 
 Layers are a way to separate responsibilities and manage dependencies. Each layer has a specific responsibility. A higher layer can use services in a lower layer, but not vice-versa. 
 
-Tiers are physically separated, running on separate machines. A tier can call to another tier directly, or use asynchronous messaging (message queue). Although each layer might be hosted in its own tier, that’s not required. Several layers might be hosted on the same tier. Physically separating the tiers improves scalability and resiliency, but also adds latency from the additional network communication. 
+Tiers are physically separated, running on separate machines. A tier can call to another tier directly, or use asynchronous messaging (message queue). Although each layer might be hosted in its own tier, that's not required. Several layers might be hosted on the same tier. Physically separating the tiers improves scalability and resiliency, but also adds latency from the additional network communication. 
 
 A traditional three-tier application has a presentation tier, a middle tier, and a database tier. The middle tier is optional. More complex applications can have more than three tiers. The diagram above shows an application with two middle tiers, encapsulating different areas of functionality. 
 
@@ -20,7 +20,7 @@ A closed layer architecture limits the dependencies between layers. However, it 
 
 ## When to use this architecture
 
-N-tier architectures are typically implemented as IaaS applications, with each tier running on a separate set of VMs. However, an N-tier application doesn’t need to be pure IaaS. Often, it's advantageous to use managed services for some parts of the architecture, particularly caching, messaging, and data storage.
+N-tier architectures are typically implemented as IaaS applications, with each tier running on a separate set of VMs. However, an N-tier application doesn't need to be pure IaaS. Often, it's advantageous to use managed services for some parts of the architecture, particularly caching, messaging, and data storage.
 
 Consider an N-tier architecture for:
 

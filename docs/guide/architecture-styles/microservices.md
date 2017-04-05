@@ -24,7 +24,7 @@ Besides for the services themselves, some other components appear in a typical m
 
 **Service Discovery**.  Maintains a list of services and which nodes they are located on. Enables service lookup to find the endpoint for a service. 
 
-**API Gateway**. The API gateway is the entry point for clients. Clients don’t call services directly. Instead, they call the API gateway, which forwards the call to the appropriate services on the back end. The API gateway might aggregate the responses from several services and return the aggregated response. 
+**API Gateway**. The API gateway is the entry point for clients. Clients don't call services directly. Instead, they call the API gateway, which forwards the call to the appropriate services on the back end. The API gateway might aggregate the responses from several services and return the aggregated response. 
 
 The advantages of using an API gateway include:
 
@@ -55,7 +55,7 @@ Consider this architectural style for:
 
 - **Independent development**. A single development team can build, test, and deploy a service. The result is continuous innovation and a faster release cadence. 
 
-- **Fault isolation**. If a service goes down, it won’t take out the entire application. However, that doesn't mean the microservices gives you resiliency for free. You still need to follow resiliency best practices and design patterns.
+- **Fault isolation**. If a service goes down, it won't take out the entire application. However, that doesn't mean the microservices gives you resiliency for free. You still need to follow resiliency best practices and design patterns.
 
 - **Mixed technology stacks**. Teams can pick the technology that best fits their service. 
 
@@ -101,7 +101,7 @@ You can use Azure Container Service to configure and provision a Docker cluster.
  
 **Public nodes** are reachable through a public-facing load balancer. The API gateway is hosted on these nodes.
 
-**Backend nodes** run services that clients reach via the API gateway. These nodes don’t receive Internet traffic directly. The backend nodes might include more than one pool of VMs, each with a different hardware profile. For example, you could create separate pools for general compute workloads, high CPU workloads, and high memory workloads. 
+**Backend nodes** run services that clients reach via the API gateway. These nodes don't receive Internet traffic directly. The backend nodes might include more than one pool of VMs, each with a different hardware profile. For example, you could create separate pools for general compute workloads, high CPU workloads, and high memory workloads. 
 
 **Management VMs** run the master nodes for the container orchestrator. 
 
@@ -109,7 +109,7 @@ You can use Azure Container Service to configure and provision a Docker cluster.
 
 **Load balancers**.  An externally facing load balancer sits in front of the public nodes. It distributes internet requests to the public nodes. Another load balancer is placed in front of the management VMs, to allow ssh traffic to the management VMs, using NAT rules. 
 
-For reliability and scalability, each service is replicated across multiple VMs. However, because services are also relatively lightweight (compared with a monolithic application), multiple services are usually packed into a single VM. Higher density allows better resource utilization. If a particular service doesn’t use a lot of resources, you don’t need to dedicate an entire VM to running that service.
+For reliability and scalability, each service is replicated across multiple VMs. However, because services are also relatively lightweight (compared with a monolithic application), multiple services are usually packed into a single VM. Higher density allows better resource utilization. If a particular service doesn't use a lot of resources, you don't need to dedicate an entire VM to running that service.
 
 The following diagram shows three nodes running four different services (indicated by different shapes). Notice that each service has at least two instances. 
  
