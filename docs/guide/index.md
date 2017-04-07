@@ -1,10 +1,8 @@
 # Azure Application Architecture Guide
 
-The cloud is changing the way applications are built and architected. Instead of monoliths, applications are being decomposed into smaller, decentralized services. Applications scale horizontally, adding new instances as demand requires.
+The cloud is changing the way applications are built and architected. Instead of monoliths, applications are being decomposed into smaller, decentralized services. These services communicate through APIs or by using asynchronous messaging or eventing. Applications scale horizontally, adding new instances as demand requires.  
 
-This decomposition brings new challenge. Application state is distributed. The applicatino must handle issues of eventual consistency and parallel, asynchronous operatons. The system as a whole must be resilient when failures occur.
-
-The complexity of distributed systems requires new approaches to operations. Deployments must be predictable, and monitoring and telemetry are critical to give insight into the system.
+These trends bring new challenges. Application state is distributed. Data may be eventually consistent. Work is distributed too. Operations are done in parallel and asynchronously. The system as a whole must be resilient when failures occur. Deployments must be automated and predictable. Monitoring and telemetry are critical for gaining insight into the system.
 
 This guide presents a structured approach for designing applications on Azure that are scalable, resilient, and highly available. It is intended for architects and engineers who are designing solutions for Azure. 
 
@@ -31,6 +29,8 @@ Without getting into debates about agile, waterfall, and other paradigms, at a v
 1. Analyze the business domain.
 2. Design services around the business domain.
 3. Implement those services on the platform.
+
+![](./images/software-design-process.md)
 
 In this guide, we describe a series of steps on the path from analysis and design to implementation. Each step involves decisions about the architecture, starting with the most fundamental: What style of architecture are you building? A microservices archiecture? An N-tier architecture?
 
