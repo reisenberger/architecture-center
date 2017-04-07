@@ -6,7 +6,11 @@ This decomposition brings new challenge. Application state is distributed. The a
 
 The complexity of distributed systems requires new approaches to operations. Deployments must be predictable, and monitoring and telemetry are critical to give insight into the system.
 
+This guide presents a structured approach for designing applications on Azure that are scalable, resilient, and highly available. It is intended for architects and engineers who are designing solutions for Azure. 
 
+> This is not a how-to guide for individual services in Azure, which are covered in the documentation for those services.
+
+### Comparison of traditional on-premises and modern cloud 
 
 | Traditional on-premises | Modern cloud |
 |-------------------------|--------------|
@@ -19,10 +23,6 @@ The complexity of distributed systems requires new approaches to operations. Dep
 | Occasional big updates | Frequent small updates |
 | Manual management | Automated self-management |
 | Snowflake servers | Immutable infrastructure |
-
-This guide presents a structured approach for designing applications on Azure that are scalable, resilient, and highly available. It is intended for architects and engineers who are designing solutions for Azure. 
-
-> This is not a how-to guide for individual services in Azure, which are covered in the documentation for those services.
 
 ## The software development process
 
