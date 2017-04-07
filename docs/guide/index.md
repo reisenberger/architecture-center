@@ -8,7 +8,7 @@ This guide presents a structured approach for designing applications on Azure th
 
 > This is not a how-to guide for individual services in Azure, which are covered in the documentation for those services.
 
-### Comparison of traditional on-premises and modern cloud 
+### Traditional vs modern cloud 
 
 | Traditional on-premises | Modern cloud |
 |-------------------------|--------------|
@@ -17,23 +17,24 @@ This guide presents a structured approach for designing applications on Azure th
 | Relational database | Polyglot persistence (mix of storage technologies) |
 | Strong consistency | Eventual consistency |
 | Serial and synchronized processing | Parallel and asynchronous processing |
-| Design to avoid failures. Key metric is mean time between failures (MTBF) | Design for failure. Key metric is mean time to recovery (MTTR) |
+| Design to avoid failures (MTBF) | Design for failure. (MTTR) |
 | Occasional big updates | Frequent small updates |
 | Manual management | Automated self-management |
 | Snowflake servers | Immutable infrastructure |
 
-## The software development process
+## How this guide is structured
 
-Without getting into debates about agile, waterfall, and other paradigms, at a very high level there are three phases to software architecture design:
-
-1. Analyze the business domain.
-2. Design services around the business domain.
-3. Implement those services on the platform.
-
-![](./images/software-design-process.md)
-
-In this guide, we describe a series of steps on the path from analysis and design to implementation. Each step involves decisions about the architecture, starting with the most fundamental: What style of architecture are you building? A microservices archiecture? An N-tier architecture?
+In this guide, we describe a series of steps on the path from design to implementation. Each step involves decisions about the architecture, starting with the most fundamental: What kind of architecture are you building? A Microservices architecture? A more traditional N-tier application? A Big Data solution?
 
 As you move from design to implementation, the descisions become more granular and local. Should you place a message queue between two components? Can the application recover from a transient network failure? Using a structured approach helps you to keep the right focus at each stage. You move from the big picture to the particulars, and avoid making premature techical decisions early in the process.
 
 For each step of the process, we point to related guidance on the Azure Architecture Center. This guide serves as a roadmap, while the supporting content goes deeper into each area.
+
+![](./images/guide-steps.png)
+
+## Analyze the business domain
+
+Analyze the business domain to derive functional and non-functional requirements. ...
+
+![](./images/software-design-process.png)
+
